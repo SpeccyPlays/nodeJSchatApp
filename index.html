@@ -32,6 +32,11 @@
           e.preventDefault();
           if (input.value) {
             socket.emit('chat message', input.value);
+            var item = document.createElement('li');
+            item.textContent = input.value;
+            item.setAttribute('align', 'right')
+            messages.appendChild(item);
+            window.scrollTo(0, document.body.scrollHeight);
             input.value = '';
           }
         });
