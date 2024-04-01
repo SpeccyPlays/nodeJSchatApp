@@ -3,43 +3,47 @@
     color: green;
     background: black;
 }
-body {
+html {
     height: 100%;
-    margin: 0;
+}
+body {
+    margin: 10px;
     overflow: hidden;
-    margin: 0;
-    padding-bottom: 3rem;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
 }
 #screen {
     display : flex;
     padding: 10px;
-    padding-right: 10px;
+    flex: 4;
 }
 #msgbox {
-    border: 1px solid blue;
+    border: 1px dashed green;
     flex: 3;
     text-wrap: stable;
+    margin-right: 10px;
+    
 }
 #friendlist{
-    border: 1px solid red;
+    border: 1px dashed green;
+    padding: 0;
+    margin: 0;
     flex: 1;
+    text-wrap: stable;
+    align-content: flex-start;
 }
 #form {
-    padding: 0.25rem; 
-    position: fixed; 
-    bottom: 0; 
-    left: 0; 
-    right: 0; 
-    height: 3rem;
     box-sizing: border-box; 
     backdrop-filter: blur(10px);
-    flex: 4;
+    display: flex;
+    flex: 0;
 }
 #input {
     border: 1px solid green;
-    padding: 0 1rem;
-    margin: 0.25rem;
-    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    flex: 3;
 }
 #input:focus { 
     outline: none; 
@@ -47,8 +51,9 @@ body {
     .sendbutton { 
         border: 1px solid green; 
         padding: 0 1rem; 
-        margin: 0.25rem; 
-        outline: none;  
+        margin: 10px; 
+        outline: none; 
+        justify-content: flex-end; 
     }
 
 #messages { 
