@@ -4,9 +4,12 @@ const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
+const auth = require('./private/auth/auth')
+
 app.use(express.static(__dirname));
+app.use(auth);
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/private/chat.html');
 });
 io.on('connection', (socket) => {
     console.log('a user connected');

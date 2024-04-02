@@ -8,7 +8,7 @@
   <body>
     <div class="screen">
       <div class="msgbox">
-        <ul class="messages"></ul>
+        <ul id="messages"></ul>
       </div>
       
       <div class="friendlist">
@@ -16,16 +16,16 @@
       </div>
       
     </div>
-    <form class="msgform" action="">
-      <input class="msginput" autocomplete="off" /><button class="sendbutton">Send</button>
+    <form id="msgform" action="">
+      <input id="msginput" autocomplete="off" /><button class="sendbutton">Send</button>
     </form>
     <script src="/socket.io/socket.io.js"></script>
     <script>
         var socket = io();
       
         var messages = document.getElementById('messages');
-        var form = document.getElementById('form');
-        var input = document.getElementById('input');
+        var form = document.getElementById('msgform');
+        var input = document.getElementById('msginput');
       
         form.addEventListener('submit', function(e) {
           e.preventDefault();
