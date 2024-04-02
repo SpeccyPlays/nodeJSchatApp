@@ -69,19 +69,5 @@ body {
         display: inline-block;
         overflow: hidden;
         border-right: .15em solid green;
-        font-size: 1.6rem;
-        width: 0;
-        animation: 
-            typing 3s steps(20, end) forwards;
-    
+        width: 0;    
     }
-/* animation */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-/* The typewriter cursor effect */
-@keyframes blinking {
-    from { border-color: transparent }
-    to{ border-color: green; }
-}
