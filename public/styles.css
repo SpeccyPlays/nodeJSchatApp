@@ -60,14 +60,11 @@ body {
 #messages { 
     list-style-type: none; 
     margin: 0; 
-    padding: 0;
+    padding: 5px;
 }
     .sentmsg { 
 
     }
     .receivedmsg {
-        display: inline-block;
-        overflow: hidden;
-        border-right: .15em solid green;
-        width: 0;    
+ 
     }
